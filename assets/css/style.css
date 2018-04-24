@@ -1,0 +1,39 @@
+body {
+    background: url("../images/page2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: "Bookmania Regular", "Regular Italic", Bold;
+    font-size: 9pt;
+}
+#advban {
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+h1, h2, h3, h4, h5, h6, h7, h8 {
+    color: #58170d;
+    font-family: "Mrs Eaves";
+    font-variant: small-caps; 
+}
+h1 {
+    font-size: 24pt;
+}
+h2 {
+    font-size: 20pt;
+}
+h3 {
+    font-size: 15pt;
+}
+#title {
+    z-index: 100;
+}
+.banner {
+    position: relative;
+    text-align: center;
+}
+.top-left {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+}
+

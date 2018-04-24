@@ -36,4 +36,9 @@ h3 {
     top: 3%;
     left: 5%;
 }
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
 

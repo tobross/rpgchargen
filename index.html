@@ -6,11 +6,10 @@
     <title>
         From the Void
     </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="stylesheet" href="assets/css/reset.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/dndicon.png" type="image"/>
 </head>
 
 <body>
@@ -18,68 +17,98 @@
         <div class="col-lg-12 banner">
             <img id="advban" src="assets/images/advban.jpg">
             <div class="top-left">
-            <h1 class="title">5E Character Generator</h1>
+                <h1 class="title">5E Character Generator</h1>
             </div>
         </div>
     </div>
+    <div class="container">
     <div class="row">
-        <div class="col-lg-6 container">
+        <div class="col-lg-8">
             <h2>1. Name Your Character</h2>
             <form class="name">Name</form>
             <h3>2. Choose A Role</h3>
             <h7>**These roles will include all classes that have the potential to fill them.**</h7>
-            <ul class="roles">
-                <li>Tank</li>
-                <li>Healer/Support</li>
-                <li>Melee Combatant</li>
-                <li>Ranged Physical Combatant</li>
-                <li>Ranged Magic Combatant</li>
-                <li>Utility</li>
-            </ul>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Role
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Tank</a>
+                    <a class="dropdown-item" href="#">Healer/Support</a>
+                    <a class="dropdown-item" href="#">Melee Combatant</a>
+                    <a class="dropdown-item" href="#">Ranged Physical Combatant</a>
+                    <a class="dropdown-item" href="#">Ranged Magic Combatant</a>
+                    <a class="dropdown-item" href="#">Utility</a>
+                </div>
+            </div>
             <h3>3. Choose A Race</h3>
-            <ul class="races">
-                <li>Dwarf</li>
-                <li>Elf</li>
-                <li>Halfling</li>
-                <li>Human</li>
-                <li>Dragonborn</li>
-                <li>Gnome</li>
-                <li>Half-Elf</li>
-                <li>Half-Orc</li>
-                <li>Tiefling</li>
-            </ul>
+            <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Race
+                </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Dwarf</a>
+                <a class="dropdown-item" href="#">Elf</a>
+                <a class="dropdown-item" href="#">Halfling</a>
+                <a class="dropdown-item" href="#">Human</a>
+                <a class="dropdown-item" href="#">Dragonborn</a>
+                <a class="dropdown-item" href="#">Gnome</a>
+                <a class="dropdown-item" href="#">Half-Elf</a>
+                <a class="dropdown-item" href="#">Half-Orc</a>
+                <a class="dropdown-item" href="#">Tiefling</a>
+            </div>
         </div>
-    <div class="col-lg-6 container">
-        <h3>4. Choose a Class</h3>
-        <ul class="class">
-            <li class="melee">Barbarian</li>
-            <li class="utility melee healer">Bard</li>
-            <li class="healer melee">Cleric</li>
-            <li class="magic healer utility">Druid</li>
-            <li class="melee">Fighter</li>
-            <li class="melee">Monk</li>
-            <li class="healer melee tank">Paladin</li>
-            <li class="ranged">Ranger</li>
-            <li class="melee utility">Rogue</li>
-            <li class="magic utility">Sorcerer</li>
-            <li class="magic">Warlock</li>
-            <li class="utility magic">Wizard</li>
-        </ul>
-        <h3>5. Determine Ability Scores</h3>
-        <ul class="stats">
-            <li>Strength</li>
-            <li>Dexterity</li>
-            <li>Constitution</li>
-            <li>Intelligence</li>
-            <li>Wisdom</li>
-            <li>Charisma</li>
-        </ul>
-        <h3>6. Describe Your Character</h3>
-        <h3>7. Choose Equipment</h3>
+        </div>
+        <div class="col-lg-8">
+            <h3>4. Choose a Class</h3>
+            <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Class
+                        </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item melee" href="#">Barbarian</a>
+                <a class="dropdown-item utility melee healer" href="#">Bard</a>
+                <a class="dropdown-item healer melee" href="#">Cleric</a>
+                <a class="dropdown-item magic healer utility" href="#">Druid</a>
+                <a class="dropdown-item melee" href="#">Fighter</a>
+                <a class="dropdown-item melee" href="#">Monk</a>
+                <a class="dropdown-item healer melee tank" href="#">Paladin</a>
+                <a class="dropdown-item ranged" href="#">Ranger</a>
+                <a class="dropdown-item melee utility" href="#">Rogue</a>
+                <a class="dropdown-item magic utility" href="#">Sorcerer</a>
+                <a class="dropdown-item magic" href="#">Warlock</a>
+                <a class="dropdown-item utility magic" href="#">Wizard</a>
+                </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="container col-lg-6">
+            <h3>5. Determine Ability Scores</h3>
+            <ul class="stats">
+                <li class"randomizer"><button class="btn btn-secondary">Randomizer</button>
+                    </li>
+                <li id="str">Strength</li>
+                <li id="dex">Dexterity</li>
+                <li id="con">Constitution</li>
+                <li id="int">Intelligence</li>
+                <li id="wis">Wisdom</li>
+                <li id="cha">Charisma</li>
+            </ul>
+            <h3>6. Describe Your Character</h3>
+            <h3>7. Choose Equipment</h3>
+        </div>
+        </div>
+        </div>
     </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="assets/javascript/chargen.js"></script>
+    </div>
 </body>
 
 </html>

@@ -41,4 +41,23 @@ h3 {
     margin-right: 5%;
     width: 90%;
 }
+.btn {
+    background: #58170d;
+}
+.btn:hover {
+    background: #9d0a0e;
+}
+.btn:focus {
+    background: #9d0a0e;
+}
+.dropdown-item {
+    color: white;
+}
+.dropdown-item:hover {
+    background: #9d0a0e;
+    color: white;
+}
+.dropdown-menu {
+    background: #58170d;
+}
 

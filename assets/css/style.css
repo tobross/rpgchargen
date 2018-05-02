@@ -60,4 +60,9 @@ h3 {
 .dropdown-menu {
     background: #58170d;
 }
-
+.hide {
+    display: none;
+}
+.nameForm {
+    width: 200px;
+}

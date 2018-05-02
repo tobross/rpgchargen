@@ -7,9 +7,10 @@
         From the Void
     </title>
     <link rel="stylesheet" type="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="icon" href="assets/images/dndicon.png" type="image"/>
+    <link rel="icon" href="assets/images/dndicon.png" type="image" />
 </head>
 
 <body>
@@ -21,33 +22,39 @@
             </div>
         </div>
     </div>
-    <div class="container">
-    <div class="row">
-        <div class="col-lg-8">
-            <h2>1. Name Your Character</h2>
-            <form class="name">Name</form>
-            <h3>2. Choose A Role</h3>
-            <h7>**These roles will include all classes that have the potential to fill them.**</h7>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Role
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Tank</a>
-                    <a class="dropdown-item" href="#">Healer/Support</a>
-                    <a class="dropdown-item" href="#">Melee Combatant</a>
-                    <a class="dropdown-item" href="#">Ranged Physical Combatant</a>
-                    <a class="dropdown-item" href="#">Ranged Magic Combatant</a>
-                    <a class="dropdown-item" href="#">Utility</a>
-                </div>
-            </div>
-            <h3>3. Choose A Race</h3>
-            <div class="dropdown">
+    <div class="container nameForm hide">
+        <h2>1. Name Your Character</h2>
+        <form class="name">
+            <input class="nameForm" type="text" name="firstname" value="">
+            <br>
+            <input class="btn btn-secondary nameBtn" type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="container pickRole hide">
+        <h3>2. Choose A Role</h3>
+        <h7>**These roles will include all classes that have the potential to fill them.**</h7>
+        <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Race
-                </button>
+                aria-expanded="false">
+                Role
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item tank" href="#">Tank</a>
+                <a class="dropdown-item hs" href="#">Healer/Support</a>
+                <a class="dropdown-item melee" href="#">Melee Combatant</a>
+                <a class="dropdown-item rpc" href="#">Ranged Physical Combatant</a>
+                <a class="dropdown-item rmc" href="#">Ranged Magic Combatant</a>
+                <a class="dropdown-item utility" href="#">Utility</a>
+            </div>
+        </div>
+    </div>
+    <div class="container pickRace hide">
+        <h3>3. Choose A Race</h3>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Race
+            </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Dwarf</a>
                 <a class="dropdown-item" href="#">Elf</a>
@@ -60,14 +67,14 @@
                 <a class="dropdown-item" href="#">Tiefling</a>
             </div>
         </div>
-        </div>
-        <div class="col-lg-8">
-            <h3>4. Choose a Class</h3>
-            <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            Class
-                        </button>
+    </div>
+    <section class="container pickClass hide">
+        <h3>4. Choose a Class</h3>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Class
+            </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item melee" href="#">Barbarian</a>
                 <a class="dropdown-item utility melee healer" href="#">Bard</a>
@@ -81,32 +88,37 @@
                 <a class="dropdown-item magic utility" href="#">Sorcerer</a>
                 <a class="dropdown-item magic" href="#">Warlock</a>
                 <a class="dropdown-item utility magic" href="#">Wizard</a>
-                </div>
-                </div>
-                </div>
-                <div class="row">
-                    <div class="container col-lg-6">
-            <h3>5. Determine Ability Scores</h3>
-            <ul class="stats">
-                <li class"randomizer"><button class="btn btn-secondary">Randomizer</button>
-                    </li>
-                <li id="str">Strength</li>
-                <li id="dex">Dexterity</li>
-                <li id="con">Constitution</li>
-                <li id="int">Intelligence</li>
-                <li id="wis">Wisdom</li>
-                <li id="cha">Charisma</li>
-            </ul>
-            <h3>6. Describe Your Character</h3>
-            <h3>7. Choose Equipment</h3>
+            </div>
         </div>
-        </div>
-        </div>
-    </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    </section>
+    <section class="container pickStats hide">
+        <h3>5. Determine Ability Scores</h3>
+        <ul class="stats">
+            <li class "randomizer">
+                <button class="btn btn-secondary">Randomizer</button>
+            </li>
+            <li id="str">Strength ( )</li>
+            <li id="dex">Dexterity ( )</li>
+            <li id="con">Constitution ( )</li>
+            <li id="int">Intelligence ( )</li>
+            <li id="wis">Wisdom ( )</li>
+            <li id="cha">Charisma ( )</li>
+        </ul>
+    </section>
+    <section class="container charDetails hide">
+        <h3>6. Describe Your Character</h3>
+    </section>
+    <section class="container equipment hide">
+        <h3>7. Choose Equipment</h3>
+    </section>
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
     <script src="assets/javascript/chargen.js"></script>
     </div>
 </body>

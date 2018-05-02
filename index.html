@@ -39,12 +39,12 @@
                 Role
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item tank" href="#">Tank</a>
-                <a class="dropdown-item hs" href="#">Healer/Support</a>
-                <a class="dropdown-item melee" href="#">Melee Combatant</a>
-                <a class="dropdown-item rpc" href="#">Ranged Physical Combatant</a>
-                <a class="dropdown-item rmc" href="#">Ranged Magic Combatant</a>
-                <a class="dropdown-item utility" href="#">Utility</a>
+                <a class="dropdown-item role" id="tank" href="#">Tank</a>
+                <a class="dropdown-item role" id="hs" href="#">Healer/Support</a>
+                <a class="dropdown-item role" id="melee" href="#">Melee Combatant</a>
+                <a class="dropdown-item role" id="rpc" href="#">Ranged Physical Combatant</a>
+                <a class="dropdown-item role" id="rmc" href="#">Ranged Magic Combatant</a>
+                <a class="dropdown-item role" id="utility" href="#">Utility</a>
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
                 aria-expanded="false">
                 Race
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu race" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Dwarf</a>
                 <a class="dropdown-item" href="#">Elf</a>
                 <a class="dropdown-item" href="#">Halfling</a>
@@ -75,7 +75,7 @@
                 aria-expanded="false">
                 Class
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-menu class" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item melee" href="#">Barbarian</a>
                 <a class="dropdown-item utility melee healer" href="#">Bard</a>
                 <a class="dropdown-item healer melee" href="#">Cleric</a>
@@ -95,7 +95,7 @@
         <h3>5. Determine Ability Scores</h3>
         <ul class="stats">
             <li class "randomizer">
-                <button class="btn btn-secondary">Randomizer</button>
+                <button class="btn btn-secondary" id="randomizer">Randomizer</button>
             </li>
             <li id="str">Strength ( )</li>
             <li id="dex">Dexterity ( )</li>

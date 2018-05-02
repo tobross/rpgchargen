@@ -1,4 +1,18 @@
+ // Initialize Firebase
+ var config = {
+    apiKey: "AIzaSyCB8hLIKr30QaRzsxJwYM1BOLi4LVKO8RY",
+    authDomain: "clickytobey.firebaseapp.com",
+    databaseURL: "https://clickytobey.firebaseio.com",
+    projectId: "clickytobey",
+    storageBucket: "clickytobey.appspot.com",
+    messagingSenderId: "781225169562"
+  };
+  firebase.initializeApp(config);
+  database = firebase.database();
 
+  //application code starts here.
+
+  //user names their character here.
 $(document).ready(function() {
     $(".nameForm").removeClass("hide");
 $(".nameBtn").on("click", function(event) {
@@ -6,23 +20,28 @@ $(".nameBtn").on("click", function(event) {
     $(".nameForm").addClass("hide");
     $(".pickRole").removeClass("hide");
 })
-// User names their character.
+//first click brings the user to the role selection page. Each item in the drop down will have a function displaying a card with the selected role's .. well.. role.. and a button to confirm or go back to selection. Once confirmed, the next page will display.
 $(".role").on("click", function(event){
     event.preventDefault();
     $(".pickRole").addClass("hide");
     $(".pickRace").removeClass("hide");
 })
-//user selects a role from dropdown menu
+//user now selects a race from a list filtered by their role selection. Some races cannot be healers, for instance.
+//The same selection proccess will take place here, showing cards with different varriants of the selected race and confirm/back buttons.
 $(".race").on("click", function(event){
     event.preventDefault();
     $(".pickRace").addClass("hide");
     $(".pickClass").removeClass("hide");
 })
+// From this next page, users will start to define their new character, a filtered selection of classes will populate a dropdown menu and, when clicking, will prompt them variants based on starting level. once selected, the screen will move to a stat generator to further distill their new persona.
 $(".class").on("click", function(event){
     event.preventDefault();
     $(".pickClass").addClass("hide");
     $(".pickStats").removeClass("hide");
 })
+//On this page, all stats will be rolled at once initially under the rule (4d6, drop the lowest roll, amounting to a range from 3-18).
+//At the dungeon master's disgression, a user can then choose to mulligan an individual stat.
+//These initial stats will have their racial and class stats pre-added and not to exceed 20 in any stat.
 var minN = 3;
     var maxN = 18;
     var stats = [];

@@ -25,7 +25,7 @@
     <div class="container nameForm hide">
         <h2>1. Name Your Character</h2>
         <form class="name">
-            <input class="nameForm" type="text" name="firstname" value="">
+            <input id="charName" type="text" name="firstname" value="">
             <br>
             <input class="btn btn-secondary nameBtn" type="submit" value="Submit">
         </form>
@@ -39,12 +39,12 @@
                 Role
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item role" id="tank" href="#">Tank</a>
-                <a class="dropdown-item role" id="hs" href="#">Healer/Support</a>
-                <a class="dropdown-item role" id="melee" href="#">Melee Combatant</a>
-                <a class="dropdown-item role" id="rpc" href="#">Ranged Physical Combatant</a>
-                <a class="dropdown-item role" id="rmc" href="#">Ranged Magic Combatant</a>
-                <a class="dropdown-item role" id="utility" href="#">Utility</a>
+                <a class="dropdown-item role" id="tank" href="#" value="Tank">Tank</a>
+                <a class="dropdown-item role" id="hs" href="#" value="Healer/Support">Healer/Support</a>
+                <a class="dropdown-item role" id="melee" href="#" value="Melee Combatant">Melee Combatant</a>
+                <a class="dropdown-item role" id="rpc" href="#" value="Ranged Physical Combatant">Ranged Physical Combatant</a>
+                <a class="dropdown-item role" id="rmc" href="#" value="Ranged Magic Combatant">Ranged Magic Combatant</a>
+                <a class="dropdown-item role" id="utility" href="#" value="Utility"1709>Utility</a>
             </div>
         </div>
     </div>
@@ -104,12 +104,17 @@
             <li id="wis">Wisdom ( )</li>
             <li id="cha">Charisma ( )</li>
         </ul>
+        <button class="btn btn-secondary sumClick">To Summary</button>
     </section>
     <section class="container charDetails hide">
         <h3>6. Describe Your Character</h3>
     </section>
     <section class="container equipment hide">
         <h3>7. Choose Equipment</h3>
+    </section>
+    <section class="container charSummary hide">
+        <h3>8. Character Summary</h3>
+        <div><span id="charSummary"></span></div>
     </section>
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <script

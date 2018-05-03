@@ -11,18 +11,33 @@
   database = firebase.database();
 
   //application code starts here.
-
+//variables first!
+var charName;
+var charRole;
+var charClass;
+var charRace;
+var charStats;
+var background;
+var equipment;
+var STR;
+var DEX;
+var CON;
+var INT;
+var WIS;
+var CHA;
   //user names their character here.
 $(document).ready(function() {
     $(".nameForm").removeClass("hide");
 $(".nameBtn").on("click", function(event) {
     event.preventDefault();
+    charName = $("#charName").val().trim();
     $(".nameForm").addClass("hide");
     $(".pickRole").removeClass("hide");
 })
 //first click brings the user to the role selection page. Each item in the drop down will have a function displaying a card with the selected role's .. well.. role.. and a button to confirm or go back to selection. Once confirmed, the next page will display.
 $(".role").on("click", function(event){
     event.preventDefault();
+    // charRole = $(;
     $(".pickRole").addClass("hide");
     $(".pickRace").removeClass("hide");
 })
@@ -30,12 +45,14 @@ $(".role").on("click", function(event){
 //The same selection proccess will take place here, showing cards with different varriants of the selected race and confirm/back buttons.
 $(".race").on("click", function(event){
     event.preventDefault();
+    charRace = $(this).val().trim()
     $(".pickRace").addClass("hide");
     $(".pickClass").removeClass("hide");
 })
 // From this next page, users will start to define their new character, a filtered selection of classes will populate a dropdown menu and, when clicking, will prompt them variants based on starting level. once selected, the screen will move to a stat generator to further distill their new persona.
 $(".class").on("click", function(event){
     event.preventDefault();
+    charClass = $(this).val().trim();
     $(".pickClass").addClass("hide");
     $(".pickStats").removeClass("hide");
 })
@@ -62,10 +79,34 @@ var minN = 3;
             stats.push(random);
         }
         $("#str").text("Strength ("+stats[0]+")");
+        STR = stats[0];
         $("#dex").text("Dexterity ("+stats[1]+")");
+        DEX = stats[1];
         $("#con").text("Constitution ("+stats[2]+")");
+        CON = stats[2];
         $("#int").text("Intelligence ("+stats[3]+")");
+        INT = stats[3];
         $("#wis").text("Wisdom ("+stats[4]+")");
+        WIS = stats[4];
         $("#cha").text("Charisma ("+stats[5]+")");
+        CHA = stats[5];
+    })
+    $(".sumClick").on("click", function(event){
+        event.preventDefault();
+        database.ref().set({
+            Name: charName,
+            Role, charRole,
+            Class, charClass,
+            Race: charRace,
+            STR: STR,
+            DEX: DEX,
+            CON: CON,
+            INT: INT,
+            WIS: WIS,
+            CHA: CHA
+        })
+        $(".pickStats").addClass("hide");
+        $(".charSummary").removeClass("hide");
+
     })
 });
